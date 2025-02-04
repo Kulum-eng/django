@@ -3,6 +3,10 @@
 
 {% block content %}
 
+@method_decorator(login_required)
+def dispatcher(self, *args, **kwargs):
+    return super().dispatch(*kargs, **kwargs)
+
 <p>
     {{saludo}}
 </p>
