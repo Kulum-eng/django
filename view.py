@@ -2,6 +2,8 @@ from typing import Any
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 from .models import Carrera
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 def index(request):
     return HttpResponse ("Hola mundo")
