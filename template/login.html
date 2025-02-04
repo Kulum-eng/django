@@ -1,0 +1,14 @@
+{% block content %}
+{% if from.errors %}
+  <div>errror en el usuarioo contraseña</div>
+{% endif %}
+<form method = 'POST' action = "{% url 'login' %}">
+    {% csrf_token %}
+    <div> <label>usuario</label>
+        {{ form.name}}
+    </div>
+    <div> <label>Contraseña</label>
+        {{ form.password}}
+    </div>
+
+    
